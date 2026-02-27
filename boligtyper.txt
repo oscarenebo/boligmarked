@@ -1,0 +1,4 @@
+villa = 1
+rækkehus = 2
+ejerlejlighed = 3
+fritidshus = 4
