@@ -1,1 +1,6 @@
 data/
+run.bat
+scraping/
+__pycache__/
+.vscode/
+*.pyc

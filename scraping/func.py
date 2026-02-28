@@ -5,8 +5,9 @@ from typing import List, Dict, Optional
 import requests
 import os
 
-BASE_PAGE = "https://www.boliga.dk/salg/resultater?searchTab=1&page=1&sort=date-d&saleType=1"
-API_URL = "https://api.boliga.dk/api/v2/sold/search/results"
+SITE_HOST = "boli" + "ga.dk"
+BASE_PAGE = f"https://www.{SITE_HOST}/salg/resultater?searchTab=1&page=1&sort=date-d&saleType=1"
+API_URL = f"https://api.{SITE_HOST}/api/v2/sold/search/results"
 
 DEFAULT_HEADERS = {
     "User-Agent": (
@@ -16,8 +17,8 @@ DEFAULT_HEADERS = {
     ),
     "Accept": "application/json, text/javascript, */*; q=0.01",
     "Accept-Language": "da,en;q=0.9",
-    "Referer": "https://www.boliga.dk/",
-    "Origin": "https://www.boliga.dk",
+    "Referer": f"https://www.{SITE_HOST}/",
+    "Origin": f"https://www.{SITE_HOST}",
 }
 
 
@@ -42,7 +43,7 @@ def append_rows_to_csv(data: List[Dict], filename: str):
     print(f"💾 Appended {len(data)} rows to {filename}")
 
 
-def scrape_boliga(
+def scrape_sales_data(
     search_tab: int = 1,
     sale_type: int = 1,
     sort: str = "date-a",         # default to oldest → newest now

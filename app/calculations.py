@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # 1. Load your data
-df = pd.read_csv('data/raw/merged/boliga_merged.csv')
+df = pd.read_csv('data/raw/merged/merged.csv')
 
 # 2. Convert date column to actual datetime objects
 df['soldDate'] = pd.to_datetime(df['soldDate'])
