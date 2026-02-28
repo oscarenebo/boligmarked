@@ -1,0 +1,9 @@
+pandas
+numpy
+matplotlib
+streamlit
+folium
+streamlit-folium
+pydeck
+requests
+shapely
